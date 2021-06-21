@@ -1,2 +1,2 @@
 # qwctf
-QWB CTF WP
+QWB CTF WP update
