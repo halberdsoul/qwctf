@@ -1,0 +1,50 @@
+LOAD_NAME               13: m
+LOAD_CONST              29: <CODE> <genexpr>
+LOAD_CONST              30: '<genexpr>'
+MAKE_FUNCTION           0
+LOAD_NAME               10: b
+GET_ITER
+CALL_FUNCTION           1
+INPLACE_OR
+STORE_NAME              13: m
+# genexpr
+# g = (x * x for x in range(10)) >>> g <generator object <genexpr> at 0x1022ef630>
+[Code]
+            File Name: main.py
+            Object Name: <genexpr>
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 2
+            Stack Size: 3
+            Flags: 0x00000063 (CO_OPTIMIZED | CO_NEWLOCALS | CO_GENERATOR | CO_NOFREE)
+            [Names]
+                'bit_count'
+            [Var Names]
+                '.0'
+                'i'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+            [Disassembly]
+                0       <INVALID>
+                2       LOAD_FAST               0: .0
+                4       FOR_ITER                9 (to 15)
+                6       STORE_FAST              1: i
+                8       LOAD_FAST               1: i
+                10      LOAD_METHOD             0: bit_count
+                12      CALL_METHOD             0
+                14      LOAD_FAST               1: i
+                16      BUILD_TUPLE             2
+                18      YIELD_VALUE
+                20      POP_TOP
+                22      JUMP_ABSOLUTE           2
+                24      LOAD_CONST              0: None
+                26      RETURN_VALUE
+        '<genexpr>'
+
+# 调用了bit_count METHOD，此为python3.10的新特性，可对二进制数中“1”进行计数，即返回“1”的个数，类似bin(n).count("1")
+# For arbitrary-length integers, bin(n).count("1") is the fastest I could find in pure Python.
+# 参考：https://stackoverflow.com/questions/9829578/fast-way-of-counting-non-zero-bits-in-positive-integer
+# 就是用这种方式对字符串b中的字符建立的索引，也解释了为啥key的字符索引是从 2 开始的（为了凑这3个数字）

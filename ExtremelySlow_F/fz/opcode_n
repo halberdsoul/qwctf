@@ -1,0 +1,51 @@
+LOAD_NAME               13: m
+LOAD_CONST              27: <CODE> <dictcomp>
+LOAD_CONST              28: '<dictcomp>'
+MAKE_FUNCTION           0
+LOAD_NAME               14: n
+GET_ITER
+CALL_FUNCTION           1
+INPLACE_OR
+STORE_NAME              13: m
+
+# dictcomp
+# This is the general template you can follow for dictionary comprehension in Python:
+# dict_variable = {key:value for (key,value) in dictonary.items()}
+# https://www.programiz.com/python-programming/dictionary-comprehension
+
+[Code]
+            File Name: main.py
+            Object Name: <dictcomp>
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 2
+            Stack Size: 6
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'n'
+            [Var Names]
+                '.0'
+                'x'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+            [Disassembly]
+                0       BUILD_MAP               0
+                2       LOAD_FAST               0: .0
+                4       FOR_ITER                9 (to 15)
+                6       STORE_FAST              1: x
+                8       LOAD_FAST               1: x
+                10      LOAD_FAST               1: x
+                12      LOAD_GLOBAL             0: n
+                14      LOAD_FAST               1: x
+                16      BINARY_SUBSCR
+                18      BINARY_XOR
+                20      MAP_ADD                 2
+                22      JUMP_ABSOLUTE           2
+                24      RETURN_VALUE
+        '<dictcomp>'
+
+# 利用 dictcomp 遍历字典n中的值
+# LOAD_GLOBAL n和 LOAD_FAST x，对n[x]进行修改。这里用到BINARY_XOR异或操作，即n[x]^x
+# 最终将n的每个值变为可见字符的十进制数形式

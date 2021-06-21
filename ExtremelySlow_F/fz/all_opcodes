@@ -1,0 +1,542 @@
+main.pyc (Python 3.9)
+[Code]
+    File Name: main.py
+    Object Name: <module>
+    Arg Count: 0
+    Pos Only Arg Count: 0
+    KW Only Arg Count: 0
+    Locals: 0
+    Stack Size: 7
+    Flags: 0x00000040 (CO_NOFREE)
+    [Names]
+        'sys'
+        'hashlib'
+        'sha256'
+        'KSA'
+        'PRGA'
+        'RC4'
+        'xor'
+        '__name__'
+        'w'
+        'e'
+        'b'
+        's'
+        't'
+        'm'
+        'n'
+        'list'
+        'map'
+        'sorted'
+        'items'
+        'stream'
+        'print'
+        'decode'
+        'stdin'
+        'buffer'
+        'read'
+        'p'
+        'c'
+        'digest'
+    [Var Names]
+    [Free Vars]
+    [Cell Vars]
+    [Constants]
+        0
+        None
+        (
+            'sha256'
+        )
+        [Code]
+            File Name: main.py
+            Object Name: KSA
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 5
+            Stack Size: 5
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'len'
+                'list'
+                'range'
+            [Var Names]
+                'key'
+                'keylength'
+                'S'
+                'j'
+                'i'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                256
+                0
+            [Disassembly]
+                0       LOAD_GLOBAL             0: len
+                2       LOAD_FAST               0: key
+                4       CALL_FUNCTION           1
+                6       STORE_FAST              1: keylength
+                8       LOAD_GLOBAL             1: list
+                10      LOAD_GLOBAL             2: range
+                12      LOAD_CONST              1: 256
+                14      CALL_FUNCTION           1
+                16      CALL_FUNCTION           1
+                18      STORE_FAST              2: S
+                20      LOAD_CONST              2: 0
+                22      STORE_FAST              3: j
+                24      LOAD_GLOBAL             2: range
+                26      LOAD_CONST              1: 256
+                28      CALL_FUNCTION           1
+                30      GET_ITER
+                32      FOR_ITER                29 (to 63)
+                34      STORE_FAST              4: i
+                36      LOAD_FAST               3: j
+                38      LOAD_FAST               2: S
+                40      LOAD_FAST               4: i
+                42      BINARY_SUBSCR
+                44      BINARY_ADD
+                46      LOAD_FAST               0: key
+                48      LOAD_FAST               4: i
+                50      LOAD_FAST               1: keylength
+                52      BINARY_MODULO
+                54      BINARY_SUBSCR
+                56      BINARY_ADD
+                58      LOAD_CONST              1: 256
+                60      BINARY_MODULO
+                62      STORE_FAST              3: j
+                64      LOAD_FAST               2: S
+                66      LOAD_FAST               3: j
+                68      BINARY_SUBSCR
+                70      LOAD_FAST               2: S
+                72      LOAD_FAST               4: i
+                74      BINARY_SUBSCR
+                76      ROT_TWO
+                78      LOAD_FAST               2: S
+                80      LOAD_FAST               4: i
+                82      STORE_SUBSCR
+                84      LOAD_FAST               2: S
+                86      LOAD_FAST               3: j
+                88      STORE_SUBSCR
+                90      JUMP_ABSOLUTE           16
+                92      LOAD_FAST               2: S
+                94      RETURN_VALUE
+        'KSA'
+        [Code]
+            File Name: main.py
+            Object Name: PRGA
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 4
+            Stack Size: 4
+            Flags: 0x00000063 (CO_OPTIMIZED | CO_NEWLOCALS | CO_GENERATOR | CO_NOFREE)
+            [Names]
+            [Var Names]
+                'S'
+                'i'
+                'j'
+                'K'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                0
+                True
+                1
+                256
+            [Disassembly]
+                0       <INVALID>
+                2       LOAD_CONST              1: 0
+                4       STORE_FAST              1: i
+                6       LOAD_CONST              1: 0
+                8       STORE_FAST              2: j
+                10      NOP
+                12      LOAD_FAST               1: i
+                14      LOAD_CONST              3: 1
+                16      BINARY_ADD
+                18      LOAD_CONST              4: 256
+                20      BINARY_MODULO
+                22      STORE_FAST              1: i
+                24      LOAD_FAST               2: j
+                26      LOAD_FAST               0: S
+                28      LOAD_FAST               1: i
+                30      BINARY_SUBSCR
+                32      BINARY_ADD
+                34      LOAD_CONST              4: 256
+                36      BINARY_MODULO
+                38      STORE_FAST              2: j
+                40      LOAD_FAST               0: S
+                42      LOAD_FAST               2: j
+                44      BINARY_SUBSCR
+                46      LOAD_FAST               0: S
+                48      LOAD_FAST               1: i
+                50      BINARY_SUBSCR
+                52      ROT_TWO
+                54      LOAD_FAST               0: S
+                56      LOAD_FAST               1: i
+                58      STORE_SUBSCR
+                60      LOAD_FAST               0: S
+                62      LOAD_FAST               2: j
+                64      STORE_SUBSCR
+                66      LOAD_FAST               0: S
+                68      LOAD_FAST               0: S
+                70      LOAD_FAST               1: i
+                72      BINARY_SUBSCR
+                74      LOAD_FAST               0: S
+                76      LOAD_FAST               2: j
+                78      BINARY_SUBSCR
+                80      BINARY_ADD
+                82      LOAD_CONST              4: 256
+                84      BINARY_MODULO
+                86      BINARY_SUBSCR
+                88      STORE_FAST              3: K
+                90      LOAD_FAST               3: K
+                92      YIELD_VALUE
+                94      POP_TOP
+                96      JUMP_ABSOLUTE           6
+        'PRGA'
+        [Code]
+            File Name: main.py
+            Object Name: RC4
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 2
+            Stack Size: 2
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'KSA'
+                'PRGA'
+            [Var Names]
+                'key'
+                'S'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+            [Disassembly]
+                0       LOAD_GLOBAL             0: KSA
+                2       LOAD_FAST               0: key
+                4       CALL_FUNCTION           1
+                6       STORE_FAST              1: S
+                8       LOAD_GLOBAL             1: PRGA
+                10      LOAD_FAST               1: S
+                12      CALL_FUNCTION           1
+                14      RETURN_VALUE
+        'RC4'
+        [Code]
+            File Name: main.py
+            Object Name: xor
+            Arg Count: 2
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 2
+            Stack Size: 5
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'bytes'
+                'map'
+            [Var Names]
+                'p'
+                'stream'
+            [Free Vars]
+            [Cell Vars]
+                'stream'
+            [Constants]
+                None
+                [Code]
+                    File Name: main.py
+                    Object Name: <lambda>
+                    Arg Count: 1
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Locals: 1
+                    Stack Size: 3
+                    Flags: 0x00000013 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NESTED)
+                    [Names]
+                        '__next__'
+                    [Var Names]
+                        'x'
+                    [Free Vars]
+                        'stream'
+                    [Cell Vars]
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       LOAD_FAST               0: x
+                        2       LOAD_DEREF              0: stream
+                        4       LOAD_METHOD             0: __next__
+                        6       CALL_METHOD             0
+                        8       BINARY_XOR
+                        10      RETURN_VALUE
+                'xor.<locals>.<lambda>'
+            [Disassembly]
+                0       LOAD_GLOBAL             0: bytes
+                2       LOAD_GLOBAL             1: map
+                4       LOAD_CLOSURE            0: stream
+                6       BUILD_TUPLE             1
+                8       LOAD_CONST              1: <CODE> <lambda>
+                10      LOAD_CONST              2: 'xor.<locals>.<lambda>'
+                12      MAKE_FUNCTION           8
+                14      LOAD_FAST               0: p
+                16      CALL_FUNCTION           2
+                18      CALL_FUNCTION           1
+                20      RETURN_VALUE
+        'xor'
+        '__main__'
+        b'\xf6\xef\x10H\xa9\x0f\x9f\xb5\x80\xc1xd\xae\xd3\x03\xb2\x84\xc2\xb4\x0e\xc8\xf3<\x151\x19\n\x8f'
+        b'$\r9\xa3\x18\xddW\xc9\x97\xf3\xa7\xa8R~'
+        b'geo'
+        b'}\xce`\xbej\xa2\x120\xb5\x8a\x94\x14{\xa3\x86\xc8\xc7\x01\x98\xa3_\x91\xd8\x82T*V\xab\xe0\xa1\x141'
+        b"Q_\xe2\xf8\x8c\x11M}'<@\xceT\xf6?_m\xa4\xf8\xb4\xea\xca\xc7:\xb9\xe6\x06\x8b\xeb\xfabH\x85xJ3$\xdd\xde\xb6\xdc\xa0\xb8b\x961\xb7\x13=\x17\x13\xb1"
+        115
+        97
+        117
+        114
+        (
+            2
+            8
+            11
+            10
+        )
+        119
+        116
+        124
+        127
+        (
+            3
+            7
+            9
+            12
+        )
+        [Code]
+            File Name: main.py
+            Object Name: <dictcomp>
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 2
+            Stack Size: 6
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+                'n'
+            [Var Names]
+                '.0'
+                'x'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+            [Disassembly]
+                0       BUILD_MAP               0
+                2       LOAD_FAST               0: .0
+                4       FOR_ITER                9 (to 15)
+                6       STORE_FAST              1: x
+                8       LOAD_FAST               1: x
+                10      LOAD_FAST               1: x
+                12      LOAD_GLOBAL             0: n
+                14      LOAD_FAST               1: x
+                16      BINARY_SUBSCR
+                18      BINARY_XOR
+                20      MAP_ADD                 2
+                22      JUMP_ABSOLUTE           2
+                24      RETURN_VALUE
+        '<dictcomp>'
+        [Code]
+            File Name: main.py
+            Object Name: <genexpr>
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 2
+            Stack Size: 3
+            Flags: 0x00000063 (CO_OPTIMIZED | CO_NEWLOCALS | CO_GENERATOR | CO_NOFREE)
+            [Names]
+                'bit_count'
+            [Var Names]
+                '.0'
+                'i'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+            [Disassembly]
+                0       <INVALID>
+                2       LOAD_FAST               0: .0
+                4       FOR_ITER                9 (to 15)
+                6       STORE_FAST              1: i
+                8       LOAD_FAST               1: i
+                10      LOAD_METHOD             0: bit_count
+                12      CALL_METHOD             0
+                14      LOAD_FAST               1: i
+                16      BUILD_TUPLE             2
+                18      YIELD_VALUE
+                20      POP_TOP
+                22      JUMP_ABSOLUTE           2
+                24      LOAD_CONST              0: None
+                26      RETURN_VALUE
+        '<genexpr>'
+        [Code]
+            File Name: main.py
+            Object Name: <lambda>
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Locals: 1
+            Stack Size: 2
+            Flags: 0x00000043 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE)
+            [Names]
+            [Var Names]
+                'x'
+            [Free Vars]
+            [Cell Vars]
+            [Constants]
+                None
+                1
+            [Disassembly]
+                0       LOAD_FAST               0: x
+                2       LOAD_CONST              1: 1
+                4       BINARY_SUBSCR
+                6       RETURN_VALUE
+        '<lambda>'
+    [Disassembly]
+        0       LOAD_CONST              0: 0
+        2       LOAD_CONST              1: None
+        4       IMPORT_NAME             0: sys
+        6       STORE_NAME              0: sys
+        8       LOAD_CONST              0: 0
+        10      LOAD_CONST              2: ('sha256',)
+        12      IMPORT_NAME             1: hashlib
+        14      IMPORT_FROM             2: sha256
+        16      STORE_NAME              2: sha256
+        18      POP_TOP
+        20      LOAD_CONST              3: <CODE> KSA
+        22      LOAD_CONST              4: 'KSA'
+        24      MAKE_FUNCTION           0
+        26      STORE_NAME              3: KSA
+        28      LOAD_CONST              5: <CODE> PRGA
+        30      LOAD_CONST              6: 'PRGA'
+        32      MAKE_FUNCTION           0
+        34      STORE_NAME              4: PRGA
+        36      LOAD_CONST              7: <CODE> RC4
+        38      LOAD_CONST              8: 'RC4'
+        40      MAKE_FUNCTION           0
+        42      STORE_NAME              5: RC4
+        44      LOAD_CONST              9: <CODE> xor
+        46      LOAD_CONST              10: 'xor'
+        48      MAKE_FUNCTION           0
+        50      STORE_NAME              6: xor
+        52      LOAD_NAME               7: __name__
+        54      LOAD_CONST              11: '__main__'
+        56      COMPARE_OP              2 (==)
+        58      POP_JUMP_IF_FALSE       139
+        60      LOAD_CONST              12: b'\xf6\xef\x10H\xa9\x0f\x9f\xb5\x80\xc1xd\xae\xd3\x03\xb2\x84\xc2\xb4\x0e\xc8\xf3<\x151\x19\n\x8f'
+        62      STORE_NAME              8: w
+        64      LOAD_CONST              13: b'$\r9\xa3\x18\xddW\xc9\x97\xf3\xa7\xa8R~'
+        66      STORE_NAME              9: e
+        68      LOAD_CONST              14: b'geo'
+        70      STORE_NAME              10: b
+        72      LOAD_CONST              15: b'}\xce`\xbej\xa2\x120\xb5\x8a\x94\x14{\xa3\x86\xc8\xc7\x01\x98\xa3_\x91\xd8\x82T*V\xab\xe0\xa1\x141'
+        74      STORE_NAME              11: s
+        76      LOAD_CONST              16: b"Q_\xe2\xf8\x8c\x11M}'<@\xceT\xf6?_m\xa4\xf8\xb4\xea\xca\xc7:\xb9\xe6\x06\x8b\xeb\xfabH\x85xJ3$\xdd\xde\xb6\xdc\xa0\xb8b\x961\xb7\x13=\x17\x13\xb1"
+        78      STORE_NAME              12: t
+        80      LOAD_CONST              17: 115
+        82      LOAD_CONST              18: 97
+        84      LOAD_CONST              19: 117
+        86      LOAD_CONST              20: 114
+        88      LOAD_CONST              21: (2, 8, 11, 10)
+        90      BUILD_CONST_KEY_MAP     4
+        92      STORE_NAME              13: m
+        94      LOAD_CONST              22: 119
+        96      LOAD_CONST              23: 116
+        98      LOAD_CONST              24: 124
+        100     LOAD_CONST              25: 127
+        102     LOAD_CONST              26: (3, 7, 9, 12)
+        104     BUILD_CONST_KEY_MAP     4
+        106     STORE_NAME              14: n
+        108     LOAD_NAME               13: m
+        110     LOAD_CONST              27: <CODE> <dictcomp>
+        112     LOAD_CONST              28: '<dictcomp>'
+        114     MAKE_FUNCTION           0
+        116     LOAD_NAME               14: n
+        118     GET_ITER
+        120     CALL_FUNCTION           1
+        122     INPLACE_OR
+        124     STORE_NAME              13: m
+        126     LOAD_NAME               13: m
+        128     LOAD_CONST              29: <CODE> <genexpr>
+        130     LOAD_CONST              30: '<genexpr>'
+        132     MAKE_FUNCTION           0
+        134     LOAD_NAME               10: b
+        136     GET_ITER
+        138     CALL_FUNCTION           1
+        140     INPLACE_OR
+        142     STORE_NAME              13: m
+        144     LOAD_NAME               5: RC4
+        146     LOAD_NAME               15: list
+        148     LOAD_NAME               16: map
+        150     LOAD_CONST              31: <CODE> <lambda>
+        152     LOAD_CONST              32: '<lambda>'
+        154     MAKE_FUNCTION           0
+        156     LOAD_NAME               17: sorted
+        158     LOAD_NAME               13: m
+        160     LOAD_METHOD             18: items
+        162     CALL_METHOD             0
+        164     CALL_FUNCTION           1
+        166     CALL_FUNCTION           2
+        168     CALL_FUNCTION           1
+        170     CALL_FUNCTION           1
+        172     STORE_NAME              19: stream
+        174     LOAD_NAME               20: print
+        176     LOAD_NAME               6: xor
+        178     LOAD_NAME               8: w
+        180     LOAD_NAME               19: stream
+        182     CALL_FUNCTION           2
+        184     LOAD_METHOD             21: decode
+        186     CALL_METHOD             0
+        188     CALL_FUNCTION           1
+        190     POP_TOP
+        192     LOAD_NAME               0: sys
+        194     LOAD_ATTR               22: stdin
+        196     LOAD_ATTR               23: buffer
+        198     LOAD_METHOD             24: read
+        200     CALL_METHOD             0
+        202     STORE_NAME              25: p
+        204     LOAD_NAME               6: xor
+        206     LOAD_NAME               9: e
+        208     LOAD_NAME               19: stream
+        210     CALL_FUNCTION           2
+        212     STORE_NAME              9: e
+        214     LOAD_NAME               6: xor
+        216     LOAD_NAME               25: p
+        218     LOAD_NAME               19: stream
+        220     CALL_FUNCTION           2
+        222     STORE_NAME              26: c
+        224     LOAD_NAME               2: sha256
+        226     LOAD_NAME               26: c
+        228     CALL_FUNCTION           1
+        230     LOAD_METHOD             27: digest
+        232     CALL_METHOD             0
+        234     LOAD_NAME               11: s
+        236     COMPARE_OP              2 (==)
+        238     POP_JUMP_IF_FALSE       131
+        240     LOAD_NAME               20: print
+        242     LOAD_NAME               6: xor
+        244     LOAD_NAME               12: t
+        246     LOAD_NAME               19: stream
+        248     CALL_FUNCTION           2
+        250     LOAD_METHOD             21: decode
+        252     CALL_METHOD             0
+        254     CALL_FUNCTION           1
+        256     POP_TOP
+        258     LOAD_CONST              1: None
+        260     RETURN_VALUE
+        262     LOAD_NAME               20: print
+        264     LOAD_NAME               9: e
+        266     LOAD_METHOD             21: decode
+        268     CALL_METHOD             0
+        270     CALL_FUNCTION           1
+        272     POP_TOP
+        274     LOAD_CONST              1: None
+        276     RETURN_VALUE
+        278     LOAD_CONST              1: None
+        280     RETURN_VALUE
